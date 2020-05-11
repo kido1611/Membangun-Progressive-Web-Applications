@@ -1,0 +1,22 @@
+{
+  "name": "football-data",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kido1611/Membangun-Progressive-Web-Applications.git"
+  },
+  "keywords": [
+    "pwa"
+  ],
+  "author": "Muhammad Abdusy Syukur",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/kido1611/Membangun-Progressive-Web-Applications/issues"
+  },
+  "homepage": "https://github.com/kido1611/Membangun-Progressive-Web-Applications#readme"
+}
