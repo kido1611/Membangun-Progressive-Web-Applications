@@ -19,5 +19,8 @@
   "bugs": {
     "url": "https://github.com/kido1611/Membangun-Progressive-Web-Applications/issues"
   },
-  "homepage": "https://github.com/kido1611/Membangun-Progressive-Web-Applications#readme"
+  "homepage": "https://github.com/kido1611/Membangun-Progressive-Web-Applications#readme",
+  "dependencies": {
+    "materialize-css": "^1.0.0-rc.2"
+  }
 }
