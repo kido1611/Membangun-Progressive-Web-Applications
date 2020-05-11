@@ -1,7 +1,7 @@
 {
   "name": "football-data",
   "version": "1.0.0",
-  "description": "",
+  "description": "An submission dicoding on Membangun Progressive Web Applications class",
   "main": "app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -11,7 +11,8 @@
     "url": "git+https://github.com/kido1611/Membangun-Progressive-Web-Applications.git"
   },
   "keywords": [
-    "pwa"
+    "pwa",
+    "dicoding"
   ],
   "author": "Muhammad Abdusy Syukur",
   "license": "MIT",
