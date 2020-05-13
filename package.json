@@ -1,0 +1,30 @@
+{
+  "name": "football-data",
+  "version": "1.0.0",
+  "description": "Football PWA using API from https://www.football-data.org/",
+  "main": "src/app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "http-server ."
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kido1611/Membangun-Progressive-Web-Applications.git"
+  },
+  "keywords": [
+    "pwa",
+    "dicoding"
+  ],
+  "author": "Muhammad Abdusy Syukur",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/kido1611/Membangun-Progressive-Web-Applications/issues"
+  },
+  "homepage": "https://github.com/kido1611/Membangun-Progressive-Web-Applications#readme",
+  "devDependencies": {
+    "http-server": "^0.12.3"
+  },
+  "dependencies": {
+    "web-push": "^3.4.4"
+  }
+}
