@@ -1,0 +1,1 @@
+Menggunakan firebase hosting: https://football-data-dicoding.web.app 
