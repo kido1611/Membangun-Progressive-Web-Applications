@@ -11,7 +11,7 @@ function saveTeam(team){
             .then(function(db){
                 const tx = db.transaction("teams", "readwrite");
                 const store = tx.objectStore("teams");
-                store.add(team)
+                store.put(team)
 
                 resolve(tx.complete);
             })

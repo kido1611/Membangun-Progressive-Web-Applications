@@ -29,7 +29,8 @@ function json(response) {
 // Blok kode untuk meng-handle kesalahan di blok catch
 function error(error) {
     // Parameter error berasal dari Promise.reject()
-    console.log("Error : " + error);
+    console.error(error);
+    return error;
 }
 
 function getStandingLeague(id){
@@ -51,13 +52,15 @@ function getStandingLeague(id){
         .then(function(data){
             showStandingData(data);
         })
-        .catch(error);
+        .catch(error =>{
+                showStandingError(error)
+        });
 }
 
 function getTeamById(id){
     if('caches' in window){
         caches.match(`${TEAM_URL}${id}`)
-            .then(function(response){
+            .then(response => {
                 if(response){
                     response.json().then(function(data){
                         showTeamData(data);
@@ -68,10 +71,12 @@ function getTeamById(id){
     return fetchAPI(`${TEAM_URL}${id}`)
         .then(status)
         .then(json)
-        .then(function(data){
-            showTeamData(data);
+        .then(data => {
+            showTeamData(data)
         })
-        .catch(error);
+        .catch(error => {
+            showTeamError(error);
+        });
 }
 
 function getTeamMatchesById(id){

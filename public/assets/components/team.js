@@ -137,3 +137,11 @@ function showTeamData(data){
     const elements = document.querySelectorAll(".tabs");
     const instance = M.Tabs.init(elements);
 }
+
+function showTeamError(error){
+    const content = `
+        <h5>Error - ${error}</h5>
+    `;
+
+    document.getElementById("content").innerHTML = content;
+}

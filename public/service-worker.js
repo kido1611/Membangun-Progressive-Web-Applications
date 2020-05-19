@@ -8,10 +8,10 @@ else{
 }
 
 workbox.precaching.precacheAndRoute([
-    { url: '/', revision: '1' },
-    { url: '/index.html', revision: '1' },
-    { url: '/standing.html', revision: '1' },
-    { url: '/team.html', revision: '1' },
+    { url: '/' },
+    { url: '/index.html' },
+    { url: '/standing.html'},
+    { url: '/team.html'},
     { url: '/nav.html', revision: '1' },
     { url: '/manifest.json', revision: '1'},
     { url: '/app.js', revision: '1' },
@@ -26,8 +26,13 @@ workbox.precaching.precacheAndRoute([
     { url: '/assets/js/nav.js', revision: '1' },
     { url: '/assets/components/index.js', revision: '1' },
     { url: '/assets/components/standing.js', revision: '1' },
-    { url: '/assets/components/team.js', revision: '1' }
-]);
+    { url: '/assets/components/team.js', revision: '1' },
+    { url: '/assets/page/about.html', revision: '1' },
+    { url: '/assets/page/competition.html', revision: '1' },
+    { url: '/assets/page/favorite.html', revision: '1' }
+], {
+    ignoreUrlParametersMatching: [/.*/]
+});
 
 workbox.routing.registerRoute(
     new RegExp('/assets/page/'),

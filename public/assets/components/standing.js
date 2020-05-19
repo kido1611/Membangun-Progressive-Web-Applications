@@ -42,10 +42,14 @@ function showStandingData(data){
             </thead>
             <tbody>`;
     data.standings[0].table.forEach(function(result){
+        let logo = result.team.crestUrl;
+        if(logo){
+            logo = logo.replace(/^http:\/\//i, 'https://');
+        }
         standingTable += `
             <tr style="cursor: pointer;" onclick='window.location.href="team.html?id=${result.team.id}"'>
                 <td>${result.position}</td>
-                <td><img alt="logo" src="${result.team.crestUrl.replace(/^http:\/\//i, 'https://')}" width="48" height="48"></td>
+                <td><img alt="logo" src="${logo}" width="48" height="48"></td>
                 <td class="left-align">${result.team.name}</td>
                 <td>${result.playedGames}</td>
                 <td>${result.won}</td>
@@ -61,6 +65,14 @@ function showStandingData(data){
     `;
     content += standingTable;
     content += `<p class="right-align">Last update : ${lastUpdateString}</p>`;
+
+    document.getElementById("content").innerHTML = content;
+}
+
+function showStandingError(error){
+    const content = `
+        <h5>Error - ${error}</h5>
+    `;
 
     document.getElementById("content").innerHTML = content;
 }
